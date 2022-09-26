@@ -1,0 +1,19 @@
+.dialogs {
+    .dialogs-items {
+        .item {
+            padding: 10px;
+            cursor: pointer;
+            transition: .2s;
+            border-radius: 4px;
+            &:hover,
+            &.active {
+                background: #1F1D3A;
+                color: #fff;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+    }
+}
