@@ -4,17 +4,19 @@ import Dialogs from './Dialogs';
 
 let mapStateToProps = (state) => {
     return {
-        dialogsPage: state.dialogs
+        dialogsPage: state.dialogs,
+        newMessegeText: state.dialogs.newMessegeText
     }
 }
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        updateNewMessageText: () => {
-            dispatch(addNewMessageCreator());
-        },
-        sendMessage: (text) => {
+        updateNewMessageText: (text) => {
             dispatch(updateNewMessagesCreator(text));
+        },
+        sendMessage: () => {
+            dispatch(addNewMessageCreator());
+            dispatch(updateNewMessagesCreator(''));
         }
     }
 }

@@ -5,6 +5,7 @@ import './Dialogs.scss'
 import Message from './Message/Message';
 
 const Dialogs = (props) => {
+
   let addMessege = () => {
     props.sendMessage();
   }
@@ -24,7 +25,7 @@ const Dialogs = (props) => {
           {props.dialogsPage.messegesData.map((e, i) => <Message message={e.messege} key={i} />)}
         </div>
         <AddMessege
-          newMessegeText={props.dialogsPage.newMessegeText}
+          newMessegeText={props.newMessegeText}
           onMessageChange={onMessageChange}
           addMessege={addMessege}
         />
