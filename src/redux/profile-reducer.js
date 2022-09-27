@@ -39,21 +39,18 @@ const profileReducer = (state = initialState, action) => {
                 likeCount: 0,
                 image: 'https://vjoy.cc/wp-content/uploads/2020/10/2e91c881628ae39e9d7f66a9740f08c0.jpg'
             };
-            let stateCopy = {...state}
-            stateCopy.postsData = [...state.postsData];
-            stateCopy.postsData.push(newPost);
-            state.postsData.push(newPost);
-            state.newPostText = '';
-            return stateCopy;
+            return {
+                ...state,
+                newPostText: '',
+                postsData: [...state.postsData, newPost]
+            }
         }
         case UPDATE_NEW_POST_TEXT: {
-            let stateCopy = {...state}
-            stateCopy.postsData = [...state.postsData];
-            
-            stateCopy.newPostText = action.newPost;
-            return stateCopy;
+            return {
+                ...state,
+                newPostText: action.newPost
+            }
         }
-            
         default:
             return state;
     }

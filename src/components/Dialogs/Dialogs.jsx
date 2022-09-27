@@ -5,7 +5,6 @@ import './Dialogs.scss'
 import Message from './Message/Message';
 
 const Dialogs = (props) => {
-
   let addMessege = () => {
     props.sendMessage();
   }
