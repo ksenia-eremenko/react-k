@@ -4,7 +4,7 @@ const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 let initialState = {
     postsData: [{
             id: 1,
-            message: 'Hi, how are you?',
+            message: 'Hi, how are you!?',
             likeCount: 2,
             image: 'https://klike.net/uploads/posts/2019-03/1551511823_2.jpg'
         },

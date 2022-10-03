@@ -4,7 +4,7 @@ const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
 let initialState = {
     dialogsData: [{
             id: 1,
-            name: 'Ksenia'
+            name: 'Ruby Johnson'
         },
         {
             id: 2,
