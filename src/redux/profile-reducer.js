@@ -2,7 +2,12 @@ const ADD_NEW_POST = 'ADD-NEW-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
 let initialState = {
-    postsData: [
+    postsData: [{
+            id: 1,
+            message: 'Hi, how are you!?',
+            likeCount: 2,
+            image: 'https://klike.net/uploads/posts/2019-03/1551511823_2.jpg'
+        },
         {
             id: 2,
             message: `It's my first post`,
@@ -23,7 +28,7 @@ let initialState = {
         }
     ],
     newPostText: ""
-}   
+}
 
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
