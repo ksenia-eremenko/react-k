@@ -24,7 +24,9 @@ const App = () => {
             <DialogsContainer />}
           />
           <Route path='/news' element={<News />} />
-          <Route path='/users' element={<UsersContainer />}
+          <Route path='/users' element={
+            <UsersContainer
+          />}
           />
           <Route path='/music' element={<Music />} />
           <Route path='/settings' element={<Settings />} />

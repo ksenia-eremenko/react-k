@@ -2,7 +2,7 @@ import React from 'react'
 import "./Users.scss"
 
 const Users = (props) => {
-    if (!props.usersPage.users.length) {
+    if (!props.users.length) {
         props.setUsers = ([
             {
                 id: 1,
@@ -41,9 +41,8 @@ const Users = (props) => {
     }
     return (
         <div className="users">
-            <div className="title">{props.usersPage.title}</div>
             <div className="items">
-                {props.usersPage.users.map(e => <div className="item" key={e.id}>
+                {props.users.map(e => <div className="item" key={e.id}>
                     <div className="left">
                         <div className="image">
                             <img src={e.image} alt="" />
